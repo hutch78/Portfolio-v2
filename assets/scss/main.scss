@@ -1,0 +1,74 @@
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/typography';
+
+@import 'components/line-btn';
+
+body {
+    background-color: #333;
+    color: gray;
+}
+
+.page-enter-active {
+  
+}
+
+.page-leave-active {
+  // animation: acrossOut 1s ease-in both;
+}
+
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(0, -10%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 10%, 0);
+  }
+}
+
+.page-enter {
+    animation: acrossIn 1s ease-out both;
+}
+
+.page-leave {
+    animation: acrossOut 1s ease-out both;
+}
+
+.page-enter-active, 
+.page-leave-active {
+    transition: all 0.1s ease-out;
+//   transform-style: preserve-3d;
+//   backface-visibility: hidden;
+//   transform-origin: 50% 0;
+  opacity: 1;
+//   .transition-bars {
+//       opacity: 0;
+//       .bar {
+//           width: 0%;
+//       }
+//   }
+}
+.page-enter,
+.page-leave-active  {
+  opacity: 0;
+//   .page-title,
+//   .content-wrapper {
+//       transform: translate3d(0,-50px,0) !important;
+//       transition-delay: 2s;
+//   }
+//   .transition-bars {
+//       opacity: 1;
+//       .bar {
+//           width: 100%;
+//       }
+//   }
+}

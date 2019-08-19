@@ -1,0 +1,12 @@
+// Type
+
+
+@mixin serif($weight: 400) {
+  font-family: 'Playfair Display', 'Georgia', 'Times', arial;
+  font-weight: $weight;
+}
+
+@mixin sans-serif($weight: 400) {
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', arial;
+  font-weight: $weight;
+}

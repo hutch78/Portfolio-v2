@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,700');
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    display: block;
+    font-weight: 700;
+    color: $colts-blue;
+}
+
+h1 {
+  font-size: 6.554rem;
+}
+
+h2 {
+  font-size: 4.096rem;
+}
+
+h3 {
+  font-size: 2.56rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+ul, ol {
+  padding-left: 0;
+  ul, ol {
+    margin: .5em 0;
+    padding-left: 1em;
+  }
+}
+
+p, li {
+  font-family: 'Roboto', sans-serif;
+  color: $text-light;
+  line-height: 1.5;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+@mixin fade-in-down($duration: .5s, $delay: 0s){
+  opacity: 0;
+  transform: translate3d(0,-20px,0);
+  // name - duration - ease - delay - direction - fill mode - play-state
+  animation: fade-in-down $duration ease-out $delay 1 forwards;
+}
+
+.page-title {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: $color-primary;
+  @include fade-in-down(1s);
+}
+
+a {
+  color: $color-primary;
+}
+
+
+
+.content-wrapper {
+
+  @include fade-in-down(.3s, 0s);
+  h2, h3, h4 {
+    margin: .5rem 0;
+  }
+  p {
+    line-height: 1.5;
+    
+    @media screen and (min-width: 1030px){
+      font-size: 1.1rem;
+    }
+    &:not(:last-child){
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+blockquote {
+  position: relative;
+  margin-left: 0;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  display: block;
+  p {
+    @include serif;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 2.35rem;
+  }
+  &:before {
+    border-radius: 10px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: .25rem;
+    background-color: $colts-blue;
+  }
+}
