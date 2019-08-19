@@ -1,6 +1,6 @@
-# hutchportv2
+# My personal Portfolio Website
 
-> My pioneering Nuxt.js project
+Version 2
 
 ## Build Setup
 
